@@ -1,3 +1,5 @@
+#Adit is a bitch
+
 import discord, random, asyncio
 from discord.ext import commands
 
