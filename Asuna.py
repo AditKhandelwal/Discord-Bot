@@ -82,7 +82,7 @@ async def on_message(message):
         await roll(ctx, 6)
 
     else:  
-        await asuna.process_commands(message)\
+        await asuna.process_commands(message)
 
 @asuna.event
 async def on_ready():
