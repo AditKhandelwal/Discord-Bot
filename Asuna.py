@@ -1,5 +1,3 @@
-#Adit is a bitch
-
 import discord, random, asyncio
 from discord.ext import commands
 
@@ -16,39 +14,39 @@ asuna = commands.Bot(command_prefix='asuna ',intents=intents)
 async def hello(ctx):
     await ctx.send('Hello!')
 
-# @asuna.command()
-# async def rps(ctx):
-#     embed = discord.Embed(
-#         title = "Rock Paper Scissors",
-#         description = "Pick Rock, Paper, or Scissors"
+@asuna.command()
+async def rps(ctx):
+    embed = discord.Embed(
+        title = "Rock Paper Scissors",
+        description = "Pick Rock, Paper, or Scissors"
         
-#     )
-#     embed.add_field(name = 'Rock', value = '✊', inline= True)
-#     embed.add_field(name = 'Paper', value = '🖐️', inline= True)
-#     embed.add_field(name = 'Scissors', value = '✌️', inline= True)
+    )
+    embed.add_field(name = 'Rock', value = '✊', inline= True)
+    embed.add_field(name = 'Paper', value = '🖐️', inline= True)
+    embed.add_field(name = 'Scissors', value = '✌️', inline= True)
     
-#     await ctx.send(embed=embed)
+    await ctx.send(embed=embed)
 
 
 
-# @asuna.command()
-# async def rps123(ctx):
-#     rps = ['rock', 'paper', 'scissors']
-#     cpu_pick = rps[random.randint(0,2)]
-#     await ctx.send('**Playing Against Asuna** \nPick Rock, Paper or Scissors')
-#     @asuna.event
-#     async def on_message(message):
-#         if message.content.lower() == 'rock' and cpu_pick == 'paper' or message.content.lower() == 'paper' and cpu_pick == 'scissors' or message.content.lower() == 'scissors' and cpu_pick == 'rock':
-#             await ctx.send(f'Asuna Picked {cpu_pick}')
-#             await ctx.send('You Lose!')
+@asuna.command()
+async def rps123(ctx):
+    rps = ['rock', 'paper', 'scissors']
+    cpu_pick = rps[random.randint(0,2)]
+    await ctx.send('**Playing Against Asuna** \nPick Rock, Paper or Scissors')
+    @asuna.event
+    async def on_message(message):
+        if message.content.lower() == 'rock' and cpu_pick == 'paper' or message.content.lower() == 'paper' and cpu_pick == 'scissors' or message.content.lower() == 'scissors' and cpu_pick == 'rock':
+            await ctx.send(f'Asuna Picked {cpu_pick}')
+            await ctx.send('You Lose!')
             
-#         elif message.content.lower() == 'paper' and cpu_pick == 'rock' or message.content.lower() == 'scissors' and cpu_pick == 'paper' or message.content.lower() == 'rock' and cpu_pick == 'scissors':
-#             await ctx.send(f'Asuna Picked {cpu_pick}')
-#             await ctx.send('You Won!')
-#         elif message.content.lower() == cpu_pick:
-#             await ctx.send(f'Asuna Picked {cpu_pick}')
-#             await ctx.send("It's a Draw!")
-#    
+        elif message.content.lower() == 'paper' and cpu_pick == 'rock' or message.content.lower() == 'scissors' and cpu_pick == 'paper' or message.content.lower() == 'rock' and cpu_pick == 'scissors':
+            await ctx.send(f'Asuna Picked {cpu_pick}')
+            await ctx.send('You Won!')
+        elif message.content.lower() == cpu_pick:
+            await ctx.send(f'Asuna Picked {cpu_pick}')
+            await ctx.send("It's a Draw!")
+   
 
 
 
